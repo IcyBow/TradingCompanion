@@ -6,6 +6,11 @@ I want this trading companion to be **the tool** you need for your trading caree
 
 ## Features
 ### Modules
+#### Core
+- General aspect
+- Visual template
+- External libraries 
+- Utilities (small tools that are too small to be a module)
 #### Trade logger
 - Log a trade
 - View live PNL of trades
