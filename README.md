@@ -2,7 +2,7 @@
 The decription here will be updated along with the code to give an accurate description of the actual tool.
 
 ## Plan
-I want this trading companion to be the tool you need for your trading career. At least, in the beginning, it will be especially Cryptocurrencies oriented. For this I want to create it in modules, so that in the end all modules work together as a complete app.
+I want this trading companion to be **the tool** you need for your trading career. At least, in the beginning, it will be especially Cryptocurrencies oriented. For this I want to create it in modules, so that in the end all modules work together as a complete app.
 
 ## Features
 ### Modules
