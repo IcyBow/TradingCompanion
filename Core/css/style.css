@@ -1,3 +1,13 @@
+:root {
+    --sidenav-backgroundcolor: #f1f1f1;
+    --sidenav-title-color: #006e45;
+    --sidenav-link-color: black;
+    --sidenav-link-active-backgroundcolor: #04AA6D;
+    --sidenav-link-active-color: white;
+    --sidenav-link-hover-backgroundcolor: #555;
+    --sidenav-link-hover-color: white;
+}
+
 body {
     margin: 0;
 }
@@ -9,10 +19,30 @@ body {
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: var(--sidenav-backgroundcolor);
     position: fixed;
     height: 100%;
     overflow: auto;
+}
+
+
+/* Sidebar title */
+
+.sidebar h1 {
+    display: block;
+    color: var(--sidenav-title-color);
+    text-align: center;
+}
+
+
+/* Sidebar sublinks */
+
+.sidebar ul {
+    margin: 0;
+}
+
+.sidebar ul a {
+    padding: 7px;
 }
 
 
@@ -20,25 +50,26 @@ body {
 
 .sidebar a {
     display: block;
-    color: black;
-    padding: 16px;
+    color: var(--sidenav-link-color);
+    padding: 14px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 
 /* Active/current link */
 
 .sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
+    background-color: var(--sidenav-link-active-backgroundcolor);
+    color: var(--sidenav-link-active-color);
 }
 
 
 /* Links on mouse-over */
 
 .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+    background-color: var(--sidenav-link-hover-backgroundcolor);
+    color: var(--sidenav-link-hover-color);
 }
 
 
@@ -50,6 +81,11 @@ div.content {
     height: 1000px;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 
@@ -59,11 +95,17 @@ div.content {
         height: auto;
         position: relative;
     }
+    .sidebar ul {
+        display: none;
+    }
     .sidebar a {
         float: left;
     }
     div.content {
         margin-left: 0;
+    }
+    .footer {
+        display: none;
     }
 }
 
@@ -71,8 +113,24 @@ div.content {
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 
 @media screen and (max-width: 400px) {
+    .sidebar h1 {
+        text-align: center;
+        float: none;
+    }
+    .sidebar ul {
+        display: none;
+    }
     .sidebar a {
         text-align: center;
         float: none;
     }
+    .footer {
+        display: none;
+    }
+}
+
+#gitRepoLink,
+#projectLicense {
+    all: unset;
+    text-decoration: inherit;
 }
