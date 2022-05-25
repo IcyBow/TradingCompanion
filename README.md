@@ -23,6 +23,10 @@ I want this trading companion to be **the tool** you need for your trading caree
 - System send you an alert with desired delay
 - Email alert
 - Push alert
+#### Invest manager
+- Similar to Trade logger but with long term approach
+- Some stats about ROI, growth and long term vision
+- Ability to read live price of stock ticker
 #### Capital manager
 - Manage your capital
 - Integration with Trade logger Module
